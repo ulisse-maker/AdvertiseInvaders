@@ -1678,6 +1678,8 @@ https://github.com/arcadeJHS/AvertiseInvaders
 		var bestScore = null;
 
 			// retrieve score
+			//TODO: dobiamo fissare la chiamata all server del recupero score
+			/*
 			qwest.post(
 				'assets/php/si_call.php',
 				{action: "getScore"}
@@ -1694,6 +1696,14 @@ https://github.com/arcadeJHS/AvertiseInvaders
 		        // start game
 				microSpaceInvaders("game", bestScore);
 		    });
+			*/
+			bestScore =
+			{
+				name:"Uli",
+				score:1
+			}
+			microSpaceInvaders("game", bestScore);
+
 	}
 
 		//}
