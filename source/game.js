@@ -1666,11 +1666,16 @@ https://github.com/arcadeJHS/AvertiseInvaders
 		initGame();
 		
 	};
+	var message = function(text) {
+		alert(text);
+	}
 
 	//document.onreadystatechange = function() {
 		//if (document.readyState === "complete") {
 	window.WIinit = function() {		
-			var bestScore = null;
+		//message("good luck");	
+		
+		var bestScore = null;
 
 			// retrieve score
 			qwest.post(
