@@ -1679,14 +1679,14 @@ https://github.com/arcadeJHS/AvertiseInvaders
 
 			// retrieve score
 			//TODO: dobiamo fissare la chiamata all server del recupero score
-			/*
-			qwest.post(
-				'assets/php/si_call.php',
-				{action: "getScore"}
+			
+			qwest.get(
+				'http://localhost:3000/scores'
+				
 			)
 			.success(function(response) {
-				if (response.data && response.data.length > 0) {
-					bestScore = response.data[0];
+				if (response) {
+					bestScore = response;
 				}
 			})
 			.error(function(message) {
@@ -1696,12 +1696,8 @@ https://github.com/arcadeJHS/AvertiseInvaders
 		        // start game
 				microSpaceInvaders("game", bestScore);
 		    });
-			*/
-			bestScore = null
-			//{
-				//name:"Uli",
-				//score:1
-			//}
+			
+			
 			microSpaceInvaders("game", bestScore);
 
 	}
