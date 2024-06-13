@@ -1283,8 +1283,8 @@ https://github.com/arcadeJHS/AvertiseInvaders
 				score = human.score;
 
 			qwest.post(
-				'assets/php/si_call.php',
-				{action: "saveScore", name: name, email: email, score: score}
+				'http://localhost:3000/scores',
+				{ name: name, score: score}
 			)
 			.success(function(response) {
 				//alert(response.text);
@@ -1685,8 +1685,8 @@ https://github.com/arcadeJHS/AvertiseInvaders
 				
 			)
 			.success(function(response) {
-				if (response) {
-					bestScore = response;
+				if (response && response.length) {
+					bestScore = response[0];
 				}
 			})
 			.error(function(message) {
