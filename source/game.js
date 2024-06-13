@@ -1584,7 +1584,7 @@ https://github.com/arcadeJHS/AvertiseInvaders
 					textHelper.writeText({id: "playAgain", cls: "text clickText menuText", text: "play again", onclick: startGame})					
 				];
 
-				if (gameBestScore && human.score > gameBestScore.score) {
+				if (!gameBestScore || human.score >= gameBestScore.score) {
 					gameOverContent.push(textHelper.writeAnything({type: "span", id:"nameLabel", cls:"labelSpan", innerhtml:"Name: "}));
 					gameOverContent.push(textHelper.writeAnything({type: "input", id:"nameInput", cls:"inputBox", attributes:[["type", "text"]]}));
 					gameOverContent.push(textHelper.writeText({id: "scoreSubmitButton", cls: "text clickText menuText", text: "save your score", onclick: submitScore}));
@@ -1697,11 +1697,11 @@ https://github.com/arcadeJHS/AvertiseInvaders
 				microSpaceInvaders("game", bestScore);
 		    });
 			*/
-			bestScore =
-			{
-				name:"Uli",
-				score:1
-			}
+			bestScore = null
+			//{
+				//name:"Uli",
+				//score:1
+			//}
 			microSpaceInvaders("game", bestScore);
 
 	}
